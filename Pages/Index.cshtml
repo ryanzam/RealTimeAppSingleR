@@ -1,10 +1,37 @@
 ﻿@page
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
+    <div class="container">
+            <div class="row">
+                <h1><span class="badge bg-secondary">SignalR </span>Chat</h1>
+            </div>
+            <hr />
+        <div class="row align-items-start">
+            <div class="col">
+                <div class="row">
+                    <div class="col-3">UserName</div>
+                    <div class="col-9"><input type="text" id="sender" /></div>
+                </div>
+                <div class="row">&nbsp;</div>
+                <div class="row">
+                    <div class="col-3">Message</div>
+                    <div class="col-9"><input type="text" id="msg" /></div>
+                </div>
+                <div class="row">&nbsp;</div>
+                <div class="row">
+                    <div class="col-12">
+                        <input type="button" id="sendBtn" value="Send Message" />
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col-12">
+                        <div id="msgs"></div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.0-preview.1.22109.13/signalr.min.js" integrity="sha512-2tH0oZJDNh5cdAlL3f2OjKluxgP+AdsWumt49E4HE02pavfTUsdJELjIwSpjK3tsHtyn/RxQa3MuRh/tGNXvhg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="~/js/chat.js"></script>
